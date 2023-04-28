@@ -31,16 +31,17 @@ header{
 .clear {
     clear :both;
 }
-.imagen{
+.imagen-perfil {
     display: block;
-    width: 300px;
+    width: 250px;
     height: auto;
     margin: 15px auto;
     border-radius: 50%;
+    border: 3px solid blueviolet;
 }
+
 h1, h2 {
     text-align: center;
-    color: blueviolet;
 }
 h1 {
     margin: 0;
@@ -69,9 +70,23 @@ h4{
     display: block;
     width: 80%;
 }
+.form-label{
+    margin-top: 5px;
+    font-weight: 700;
+    color: rgb(51, 47, 47);
+}
 input[type="button"]{
     width: 80px;
     margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background-color: blueviolet;
+    padding: 2px 5px;
+
+}
+input[type="button"]:hover{
+    cursor:pointer;
 }
 .separador{
     width: 85%;
@@ -94,10 +109,13 @@ a:link, a:visited {
    display: inline-block;
    border-radius: 4px;
    border: 1px solid blueviolet;
-   margin-top: 2px;
   }
 a:hover, a:active {
     background-color: gray;
     color: white;
+}
+
+.item-alineado {
+    vertical-align:middle;
 }
     
