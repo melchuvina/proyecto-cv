@@ -1,0 +1,33 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: beige;
+}
+header, main, footer {
+    max-width: 1200px;
+    min-width: 750px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+#aside-content {
+    float: left;
+    width: 30%;
+
+}
+#main-content {
+    float: left;
+    width: 70%;
+}
+
+.clear {
+    clear :both;
+}
+.imagen{
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+h1, h2 {
+    text-align: center;
+}

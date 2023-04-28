@@ -2,17 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Proyecto.cv</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
+    <title>Proyecto.cv</title>
 </head>
 <body>
     <header>
         <h1>Melany Espindola</h1>
         <h2><em>QA Manual</em></h2>
-        <img src="fotodeperfil.jpg" alt="foto de perfil"> 
+        <img src="fotodeperfil.jpg" alt="foto de perfil" class="imagen"> 
     </header>
     <main>
-        <aside>
+        <aside id="aside-content">
             <section>
                 <h3>Contacto</h3>
                 <div>
@@ -38,7 +41,7 @@
             </ul>
             </section>
         </aside>
-        <div>
+        <div id="main-content">
             <section>
                 <h3>Sobre mí</h3>
                 <P>QA Manual con +2 años de experiencia realizando pruebas manuales en sistemas de procesamiento de datos y en aplicativos web. Estoy abocada al aprendizaje constante de nuevas tecnologías orientadas a la accesibilidad</P>
@@ -88,6 +91,7 @@
 
             </section>
         </div>
+        <div class="clear"></div>
     </main>
     
     <footer>
