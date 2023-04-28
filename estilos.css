@@ -118,4 +118,10 @@ a:hover, a:active {
 .item-alineado {
     vertical-align:middle;
 }
+ul {
+    padding-left: 0;
+}
+li{
+    list-style: none;
+}
     
