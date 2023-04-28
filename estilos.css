@@ -9,7 +9,7 @@ header, main, footer {
     padding: 15px 0;
 }
 header{
-    background-color: rgb(179, 243, 222);
+    background-color:rgb(212, 180, 241);
     margin-top: 20px;
     border-radius: 20px;
     max-width: 1300px;
@@ -37,7 +37,7 @@ header{
     height: auto;
     margin: 15px auto;
     border-radius: 50%;
-    border: 3px solid blueviolet;
+    border: 4px solid rgb(85, 15, 150);
 }
 
 h1, h2 {
@@ -91,7 +91,7 @@ input[type="button"]:hover{
 .separador{
     width: 85%;
     height: 3px;
-    background-color: darkslategrey;
+    background-color: rgb(142, 24, 245);
     margin: 15px 0;
     
 }
