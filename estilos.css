@@ -1,24 +1,33 @@
 body {
     font-family: 'Work Sans', sans-serif;
-    background-color: beige;
 }
 header, main, footer {
     max-width: 1200px;
     min-width: 750px;
     margin: 0 auto;
-    background-color: antiquewhite;
+    background-color:#ffffff;
+    padding: 15px 0;
 }
-
+header{
+    background-color: rgb(179, 243, 222);
+    margin-top: 20px;
+    border-radius: 20px;
+    max-width: 1300px;
+}
 #aside-content {
     float: left;
     width: 30%;
-
 }
 #main-content {
     float: left;
     width: 70%;
 }
-
+.main-section{
+    margin-bottom: 30px;
+}
+.sub-section{
+    margin-bottom: 15px;
+}
 .clear {
     clear :both;
 }
@@ -26,8 +35,69 @@ header, main, footer {
     display: block;
     width: 300px;
     height: auto;
-    margin: 0 auto;
+    margin: 15px auto;
+    border-radius: 50%;
 }
 h1, h2 {
     text-align: center;
+    color: blueviolet;
 }
+h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+h2{
+    font-weight: 700;
+}
+h3{
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+  
+}
+h4{
+    margin: 3px 0;
+    font-size: 18px;
+}
+.empresa{
+    font-style: italic;
+    color: rgb(51, 47, 47);
+}
+.form-contacto input, .form-contacto label, .form-contacto textarea {
+    display: block;
+    width: 80%;
+}
+input[type="button"]{
+    width: 80px;
+    margin-top: 10px;
+}
+.separador{
+    width: 85%;
+    height: 3px;
+    background-color: darkslategrey;
+    margin: 15px 0;
+    
+}
+td, th {
+    padding-right: 15px;
+    text-align: left;
+}
+footer > p{
+    text-align: center;
+}
+a:link, a:visited {
+   text-decoration: none;
+   color: blueviolet;
+   padding: 2px 5px;
+   display: inline-block;
+   border-radius: 4px;
+   border: 1px solid blueviolet;
+   margin-top: 2px;
+  }
+a:hover, a:active {
+    background-color: gray;
+    color: white;
+}
+    

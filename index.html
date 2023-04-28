@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1>Melany Espindola</h1>
-        <h2><em>QA Manual</em></h2>
+        <h2>QA Manual</h2>
         <img src="fotodeperfil.jpg" alt="foto de perfil" class="imagen"> 
     </header>
     <main>
@@ -19,10 +19,11 @@
             <section>
                 <h3>Contacto</h3>
                 <div>
-                <p><strong>Email:</strong>mj.espindola98@gmail.com</p>
-                <p><strong>Celu:</strong>123456789</p>
+                    <p><strong>Email:</strong>mj.espindola98@gmail.com</p>
+                    <p><strong>Celu:</strong>123456789</p>
                 </div>
             </section>
+            <div class="separador"></div>
             <section>
                 <h3>Enlaces</h3>
                 <ul>
@@ -30,6 +31,7 @@
                     <li><a href="https://github.com/melchuvina" target="_blank"> Github </a></li>
                 </ul>
             </section>
+            <div class="separador"></div>
             <section>
             <h3>Habilidades</h3>
             <ul>
@@ -40,27 +42,48 @@
                 <li>Back:.NET</li>
             </ul>
             </section>
+            <div class="separador"></div>
+            <section>
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Español nativo</li>
+                    <li>Inglés B1</li>
+                </ul>
+            </section>
+            <div class="separador"></div>
+            <section>
+                <h3>¡Dejamé acá tu comentario!</h3>
+                <form action="" class="form-contacto">
+                    <label for="form-name">Nombre</label>
+                    <input id="form-name" type="text">
+                    <label for="form-email">Email</label>
+                    <input id="form-email" type="email">
+                    <label for="Mensaje">Mensaje</label>
+                    <textarea name="textarea">Dejame acá tu comentario</textarea>
+                    <input type="button" value="Enviar">
+                </form>
+            </section>
         </aside>
         <div id="main-content">
-            <section>
+            <section class="main-section">
                 <h3>Sobre mí</h3>
                 <P>QA Manual con +2 años de experiencia realizando pruebas manuales en sistemas de procesamiento de datos y en aplicativos web. Estoy abocada al aprendizaje constante de nuevas tecnologías orientadas a la accesibilidad</P>
             </section>
-            <section>
+            <section class="main-section">
                 <h3>Experiencia</h3>
-                <section>
+                <section class="sub-section">
                     <h4>QA Manual</h4>
-                    <p><strong>Telecom</strong></p>
+                    <p class="empresa"><strong>Telecom</strong></p>
                     <p>Desarrollo de casos de prueba para software de facturación y tasación internos. <br> Detección, análisis y reporte de defectos. <br> Escenarios de pruebas en Gherkin. <br> Trabajo colaborativo bajo Scrum.</p>
                 </section>
-                <section>
+                <section class="sub-section">
                     <h4>Tester</h4>
-                    <p><strong>Neoris</strong></p>
+                    <p class="empresa"><strong>Neoris</strong></p>
                     <p>Desarollo de casos de prueba para diferentes aplicativos internos del cliente<br>Encargada de detectar, analizar y reportar defectos.<br>Conocimientos avanzados en Mainframe (manejo de archivos, DB2, Control-M) y base de datos relacionales.<br>Desarrollo de trabajo bajo metodologías ágiles.</p>
                 </section>
                 <section>
                     <h4>Atención al cliente</h4>
-                    <p><strong>Telmark</strong></p>
+                    <p class="empresa"><strong>Telmark</strong></p>
                     <p>Encargada del contacto con clientes residenciales y corporativos en el área administrativa<br>de una empresa de telecomunicaciones. Manejo de CRM y AVAYA.<br>Conocimientos de Back Office y control de métricas</p>
                 </section>
             </section>
@@ -73,18 +96,18 @@
                         <th>Fecha</th>
                     </tr>
                     <tr>
-                        <td>Tecnicatura Universitaria en Tecnologías Web</td>
-                        <td>Universidad Nacional del Oeste</td>
+                        <td>Tec. Uni. en Tecnologías Web</td>
+                        <td>UNO</td>
                         <td>Feb 2023 - Presente</td>
                     </tr>
                     <tr>
                         <td>Google IT Support</td>
-                        <td>Coursera-UNSAM</td>
+                        <td>Coursera</td>
                         <td>Ago 2020 - Sep 2020</td>
                     </tr>
                     <tr>
                         <td>Desarrollo Web Full Stack</td>
-                        <td>Educación IT</td>
+                        <td>EducaciónIT</td>
                         <td>Sep 2019 - Feb 2020</td>
                     </tr>
                 </table>
@@ -95,15 +118,7 @@
     </main>
     
     <footer>
-        <form action="">
-            <label for="form-name">Nombre</label>
-            <input id="form-name" type="text">
-            <label for="form-email">Email</label>
-            <input id="form-email" type="email">
-            <textarea name="textarea">Dejame acá tu comentario</textarea>
-            <input type="button" value="Enviar">
-        </form>
-        <p>Página construida by <strong>Melchuvina</strong></p>
+        <p><small>Página construida by <strong>Melchuvina ☕</strong></small></p>
     </footer>
 </body>
 </html>
