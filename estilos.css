@@ -130,4 +130,7 @@ ul {
 li{
     list-style: none;
 }
+table > caption {
+    text-align: left;
+}
     
