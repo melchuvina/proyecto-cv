@@ -8,124 +8,131 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Proyecto.cv</title>
     <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="container">
         <img src="imagenes/fotodeperfil.jpg" alt="foto de perfil" class="imagen-perfil">
         <h1>Melany Espindola</h1>
         <h2>QA Manual 🕵️‍♂️</h2>   
     </header>
-    <main>
-        <aside id="aside-content">
-            <section>
-                <h3>Contacto</h3>
-                <div>
-                    <p><strong>Email: </strong>mj.espindola98@gmail.com</p>
-                    <p><strong>Celu: </strong>123456789</p>
-                </div>
-            </section>
-            <div class="separador"></div>
-            <section>
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><img src="imagenes/icon-linkedin-32.png" alt="icono linkedin" class="item-alineado"> <a href="https://www.linkedin.com/in/melany-espindola/" target="_blank" class="item-alineado"> Linkedin </a></li>
-                    <li><img src="imagenes/icon-github-32.png" alt="icono github" class="item-alineado"> <a href="https://github.com/melchuvina" target="_blank" class="item-alineado"> Github </a></li>
-                </ul>
-            </section>
-            <div class="separador"></div>
-            <section>
-            <h3>Habilidades</h3>
-            <ul>
-                <li>Robot Framework, Selenium, UFT</li>
-                <li>Mainframe, SQL, Sistemas internos de procesamiento de datos</li>
-                <li>Jira, Xray, Gherkin</li>
-                <li>Front: HTML5, CCS3, JS</li>
-                <li>Back:.NET</li>
-            </ul>
-            </section>
-            <div class="separador"></div>
-            <!-- <section>
-                <h3>Idiomas</h3>
-                <ul>
-                    <li>Español Nativo</li>
-                    <li>Inglés B1</li>
-                </ul>
-            </section> 
-            <div class="separador"></div> -->
-            <section>
-                <h3>Comentarios</h3>
-                <form id="form-contact" class="form-contacto">
-                    <label for="form-name" class="form-label">Nombre*</label>
-                    <input id="form-name" class=" form-input" type="text">
-                    <label for="form-lastname" class="form-label">Apellido*</label>
-                    <input id="form-lastname" class="form-input" type="text">
-                    <label for="form-company" class="form-label">Empresa*</label>
-                    <input id="form-company" class="form-input" type="text">
-                    <label for="form-email" class="form-label">Email*</label>
-                    <input id="form-email" class="form-input" type="email">
-                    <label for="form-salary" class="form-label">Salario Mínimo*</label>
-                    <input id="form-salary" class="form-input" type="number" min="0" value="0">
-                    <label for="Mensaje" class="form-label">Mensaje*</label>
-                    <textarea name="textarea" class="form-input" id="form-comment" placeholder="Dejame acá tu comentario"></textarea>
-                    <input type="button" id="form-submit" value="Enviar">
-                </form>
-            </section>
-        </aside>
-        <div id="main-content">
-            <section class="main-section">
-                <h3>Sobre mí</h3>
-                <P>QA Manual con +2 años de experiencia realizando pruebas manuales en sistemas de procesamiento de datos y en aplicativos web. Estoy abocada al aprendizaje constante de nuevas tecnologías orientadas a la accesibilidad.</P>
-            </section>
-            <section class="main-section">
-                <h3>Experiencia</h3>
-                <section class="sub-section">
-                    <h4>QA Manual</h4>
-                    <p class="empresa"><strong>Telecom</strong></p>
-                    <p>Desarrollo de casos de prueba para software de facturación y tasación internos. <br> Detección, análisis y reporte de defectos. <br> Escenarios de pruebas en Gherkin. <br> Trabajo colaborativo bajo Scrum.</p>
+
+    <main class="container">
+        <div class="row">
+            <aside class="col-3">
+                <section>
+                    <h3>Contacto</h3>
+                    <div>
+                        <p><strong>Email: </strong>mj.espindola98@gmail.com</p>
+                        <p><strong>Celu: </strong>123456789</p>
+                    </div>
                 </section>
-                <section class="sub-section">
-                    <h4>Tester</h4>
-                    <p class="empresa"><strong>Neoris</strong></p>
-                    <p>Desarrollo de casos de prueba para diferentes aplicativos internos del cliente<br>Encargada de detectar, analizar y reportar defectos.<br>Conocimientos avanzados en Mainframe (manejo de archivos, DB2, Control-M) y base de datos relacionales.<br>Desarrollo de trabajo bajo metodologías ágiles.</p>
+                <div class="separador"></div>
+                <section>
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><img src="imagenes/icon-linkedin-32.png" alt="icono linkedin" class="item-alineado"> <a href="https://www.linkedin.com/in/melany-espindola/" target="_blank" class="item-alineado"> Linkedin </a></li>
+                        <li><img src="imagenes/icon-github-32.png" alt="icono github" class="item-alineado"> <a href="https://github.com/melchuvina" target="_blank" class="item-alineado"> Github </a></li>
+                    </ul>
+                </section>
+                <div class="separador"></div>
+                <section>
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>Robot Framework, Selenium, UFT</li>
+                    <li>Mainframe, SQL, Sistemas internos de procesamiento de datos</li>
+                    <li>Jira, Xray, Gherkin</li>
+                    <li>Front: HTML5, CCS3, JS</li>
+                    <li>Back:.NET</li>
+                </ul>
+                </section>
+                <div class="separador"></div>
+                <!-- <section>
+                    <h3>Idiomas</h3>
+                    <ul>
+                        <li>Español Nativo</li>
+                        <li>Inglés B1</li>
+                    </ul>
+                </section> 
+                <div class="separador"></div> -->
+                <section>
+                    <h3>Comentarios</h3>
+                    <form id="form-contact" class="form-contacto">
+                        <label for="form-name" class="form-label">Nombre*</label>
+                        <input id="form-name" class=" form-input" type="text">
+                        <label for="form-lastname" class="form-label">Apellido*</label>
+                        <input id="form-lastname" class="form-input" type="text">
+                        <label for="form-company" class="form-label">Empresa*</label>
+                        <input id="form-company" class="form-input" type="text">
+                        <label for="form-email" class="form-label">Email*</label>
+                        <input id="form-email" class="form-input" type="email">
+                        <label for="form-salary" class="form-label">Salario Mínimo*</label>
+                        <input id="form-salary" class="form-input" type="number" min="0" value="0">
+                        <label for="Mensaje" class="form-label">Mensaje*</label>
+                        <textarea name="textarea" class="form-input" id="form-comment" placeholder="Dejame acá tu comentario"></textarea>
+                        <input type="button" id="form-submit" value="Enviar">
+                    </form>
+                </section>
+            </aside>
+            <div class="col-9">
+                <section class="main-section">
+                    <h3>Sobre mí</h3>
+                    <P>QA Manual con +2 años de experiencia realizando pruebas manuales en sistemas de procesamiento de datos y en aplicativos web. Estoy abocada al aprendizaje constante de nuevas tecnologías orientadas a la accesibilidad.</P>
+                </section>
+                <section class="main-section">
+                    <h3>Experiencia</h3>
+                    <section class="sub-section">
+                        <h4>QA Manual</h4>
+                        <p class="empresa"><strong>Telecom</strong></p>
+                        <p>Desarrollo de casos de prueba para software de facturación y tasación internos. <br> Detección, análisis y reporte de defectos. <br> Escenarios de pruebas en Gherkin. <br> Trabajo colaborativo bajo Scrum.</p>
+                    </section>
+                    <section class="sub-section">
+                        <h4>Tester</h4>
+                        <p class="empresa"><strong>Neoris</strong></p>
+                        <p>Desarrollo de casos de prueba para diferentes aplicativos internos del cliente<br>Encargada de detectar, analizar y reportar defectos.<br>Conocimientos avanzados en Mainframe (manejo de archivos, DB2, Control-M) y base de datos relacionales.<br>Desarrollo de trabajo bajo metodologías ágiles.</p>
+                    </section>
+                    <section>
+                        <h4>Atención al cliente</h4>
+                        <p class="empresa"><strong>Telmark</strong></p>
+                        <p>Encargada del contacto con clientes residenciales y corporativos en el área administrativa<br>de una empresa de telecomunicaciones. Manejo de CRM y AVAYA.<br>Conocimientos de Back Office y control de métricas</p>
+                    </section>
                 </section>
                 <section>
-                    <h4>Atención al cliente</h4>
-                    <p class="empresa"><strong>Telmark</strong></p>
-                    <p>Encargada del contacto con clientes residenciales y corporativos en el área administrativa<br>de una empresa de telecomunicaciones. Manejo de CRM y AVAYA.<br>Conocimientos de Back Office y control de métricas</p>
+                    <h3>Educación</h3>
+                    <caption>Títulos en orden cronológico</caption>
+                    <table>
+                        <tr>
+                            <th>Título</th>
+                            <th>Institución</th>
+                            <th>Fecha</th>
+                        </tr>
+                        <tr>
+                            <td>Tec. Uni. en Tecnologías Web</td>
+                            <td>UNO</td>
+                            <td>Feb 2023 - Presente</td>
+                        </tr>
+                        <tr>
+                            <td>Google IT Support</td>
+                            <td>Coursera</td>
+                            <td>Ago 2020 - Sep 2020</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollo Web Full Stack</td>
+                            <td>EducaciónIT</td>
+                            <td>Sep 2019 - Feb 2020</td>
+                        </tr>
+                    </table>
+    
                 </section>
-            </section>
-            <section>
-                <h3>Educación</h3>
-                <caption>Títulos en orden cronológico</caption>
-                <table>
-                    <tr>
-                        <th>Título</th>
-                        <th>Institución</th>
-                        <th>Fecha</th>
-                    </tr>
-                    <tr>
-                        <td>Tec. Uni. en Tecnologías Web</td>
-                        <td>UNO</td>
-                        <td>Feb 2023 - Presente</td>
-                    </tr>
-                    <tr>
-                        <td>Google IT Support</td>
-                        <td>Coursera</td>
-                        <td>Ago 2020 - Sep 2020</td>
-                    </tr>
-                    <tr>
-                        <td>Desarrollo Web Full Stack</td>
-                        <td>EducaciónIT</td>
-                        <td>Sep 2019 - Feb 2020</td>
-                    </tr>
-                </table>
-
-            </section>
+            </div>
         </div>
-        <div class="clear"></div>
+        <div class="row">
+
+        </div>
     </main>
     
-    <footer>
+    <footer class="container">
         <p><small>Página construida by <strong>Melchuvina ☕</strong></small></p>
     </footer>
     <script src="./script.js"></script>

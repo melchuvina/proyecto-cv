@@ -2,9 +2,6 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 header, main, footer {
-    max-width: 1200px;
-    min-width: 750px;
-    margin: 0 auto;
     background-color:#ffffff;
     padding: 15px 0;
 }
