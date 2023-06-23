@@ -13,8 +13,6 @@ const formSubmit = document.getElementById("form-submit");
 const errorClass = 'form-error';
 const commentsList = []
 
-
-
 /***** LISTENER Click botón submit  *****/
 formSubmit.addEventListener('click', () => {
     const allFieldsAreValid = validateAllFields();
@@ -30,6 +28,15 @@ formSubmit.addEventListener('click', () => {
         }
 
         commentsList.push(commentObj);
+
+        while(sectionComments.firstChild) {
+            sectionComments.removeChild(sectionComments.firstChild);
+        }
+
+        commentsList.forEach(comment => {
+            const cardElement = createCard(comment);
+            sectionComments.appendChild(cardElement);
+        });
 
         
 
@@ -143,3 +150,52 @@ function validateAllFields() {
 
 
 /***** COMMENTS SECTION  *****/
+
+function createCard(commentObj) {
+    const cardContainer = document.createElement('div');
+    const cardBody = document.createElement('div');
+    const h4 = document.createElement('h4');
+    const h5 = document.createElement('h5');
+    const pComment = document.createElement('p');
+    const spanSalaryPesosArg = document.createElement('span');
+    const spanSalaryDolarsUS = document.createElement('span');
+    const spanSalaryEuros = document.createElement('span');
+
+    cardContainer.classList.add('card', 'col-4', 'me-4', 'mb-3');
+    cardContainer.style.width = '18rem';
+
+    cardBody.classList.add('card-body');
+
+    h4.classList.add('card-title');
+    h4.innerText = commentObj.name;
+
+    h5.classList.add('card-subtitle', 'mb-2', 'text-body-secondary');
+    h5.innerText = commentObj.company;
+
+    pComment.classList.add('card-text');
+    pComment.innerText = commentObj.comment;
+
+    spanSalaryPesosArg.classList.add('card-text');
+    const pesosArg = commentObj.salary.toFixed(2).toLocaleString("arg");
+    spanSalaryPesosArg.innerText = `AR$ ${pesosArg}`;
+
+    spanSalaryDolarsUS.classList.add('card-text');
+    const dolarsUS = (commentObj.salary / 264.50).toFixed(2).toLocaleString();
+    spanSalaryDolarsUS.innerText = `U$D ${dolarsUS}`;
+
+    spanSalaryEuros.classList.add('card-text');
+    const euros = (commentObj.salary / 289.28).toFixed(2).toLocaleString("de-DE");
+    spanSalaryEuros.innerText = `€ ${euros}`;
+
+    cardBody.appendChild(h4);
+    cardBody.appendChild(h5);
+    cardBody.appendChild(pComment);
+    cardBody.appendChild(spanSalaryPesosArg);
+    cardBody.appendChild(document.createElement('br'));
+    cardBody.appendChild(spanSalaryDolarsUS);
+    cardBody.appendChild(document.createElement('br'));
+    cardBody.appendChild(spanSalaryEuros);
+    cardContainer.appendChild(cardBody);
+
+    return cardContainer;
+}
