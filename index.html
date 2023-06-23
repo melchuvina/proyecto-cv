@@ -44,24 +44,30 @@
             </ul>
             </section>
             <div class="separador"></div>
-            <section>
+            <!-- <section>
                 <h3>Idiomas</h3>
                 <ul>
                     <li>Español Nativo</li>
                     <li>Inglés B1</li>
                 </ul>
-            </section>
-            <div class="separador"></div>
+            </section> 
+            <div class="separador"></div> -->
             <section>
                 <h3>Comentarios</h3>
-                <form action="" class="form-contacto">
+                <form id="form-contact" class="form-contacto">
                     <label for="form-name" class="form-label">Nombre</label>
                     <input id="form-name" type="text">
+                    <label for="form-lastname" class="form-label">Apellido</label>
+                    <input id="form-lastname" type="text">
+                    <label for="form-company" class="form-label">Empresa</label>
+                    <input id="form-company" type="text">
                     <label for="form-email" class="form-label">Email</label>
                     <input id="form-email" type="email">
+                    <label for="form-salary" class="form-label">Salario Mínimo</label>
+                    <input id="form-salary" type="number">
                     <label for="Mensaje" class="form-label">Mensaje</label>
                     <textarea name="textarea" placeholder="Dejame acá tu comentario"></textarea>
-                    <input type="button" value="Enviar">
+                    <input type="button" id="form-button" value="Enviar">
                 </form>
             </section>
         </aside>
@@ -122,5 +128,6 @@
     <footer>
         <p><small>Página construida by <strong>Melchuvina ☕</strong></small></p>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
