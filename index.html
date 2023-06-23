@@ -55,19 +55,19 @@
             <section>
                 <h3>Comentarios</h3>
                 <form id="form-contact" class="form-contacto">
-                    <label for="form-name" class="form-label">Nombre</label>
-                    <input id="form-name" type="text">
-                    <label for="form-lastname" class="form-label">Apellido</label>
-                    <input id="form-lastname" type="text">
-                    <label for="form-company" class="form-label">Empresa</label>
-                    <input id="form-company" type="text">
-                    <label for="form-email" class="form-label">Email</label>
-                    <input id="form-email" type="email">
-                    <label for="form-salary" class="form-label">Salario Mínimo</label>
-                    <input id="form-salary" type="number">
-                    <label for="Mensaje" class="form-label">Mensaje</label>
-                    <textarea name="textarea" placeholder="Dejame acá tu comentario"></textarea>
-                    <input type="button" id="form-button" value="Enviar">
+                    <label for="form-name" class="form-label">Nombre*</label>
+                    <input id="form-name" class=" form-input" type="text">
+                    <label for="form-lastname" class="form-label">Apellido*</label>
+                    <input id="form-lastname" class="form-input" type="text">
+                    <label for="form-company" class="form-label">Empresa*</label>
+                    <input id="form-company" class="form-input" type="text">
+                    <label for="form-email" class="form-label">Email*</label>
+                    <input id="form-email" class="form-input" type="email">
+                    <label for="form-salary" class="form-label">Salario Mínimo*</label>
+                    <input id="form-salary" class="form-input" type="number" min="0" value="0">
+                    <label for="Mensaje" class="form-label">Mensaje*</label>
+                    <textarea name="textarea" class="form-input" id="form-comment" placeholder="Dejame acá tu comentario"></textarea>
+                    <input type="button" id="form-submit" value="Enviar">
                 </form>
             </section>
         </aside>

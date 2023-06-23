@@ -81,6 +81,14 @@ h4{
     font-weight: 700;
     color: rgb(51, 47, 47);
 }
+
+.form-input {
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 4px;
+}
+
 input[type="button"]{
     width: 80px;
     margin-top: 10px;
@@ -134,3 +142,7 @@ table > caption {
     text-align: left;
 }
     
+.form-error {
+    border-color: red;
+    
+}
