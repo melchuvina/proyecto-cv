@@ -12,6 +12,7 @@ const formSubmit = document.getElementById("form-submit");
 
 const errorClass = 'form-error';
 const commentsList = []
+let currentFilter = 'name'; // name - company - salary
 
 /***** LISTENER Click botón submit  *****/
 formSubmit.addEventListener('click', () => {
@@ -29,16 +30,7 @@ formSubmit.addEventListener('click', () => {
 
         commentsList.push(commentObj);
 
-        while(sectionComments.firstChild) {
-            sectionComments.removeChild(sectionComments.firstChild);
-        }
-
-        commentsList.forEach(comment => {
-            const cardElement = createCard(comment);
-            sectionComments.appendChild(cardElement);
-        });
-
-        
+        appendAllCards(currentFilter);
 
         //limpiar inputs
         clearAllFields();
@@ -151,6 +143,27 @@ function validateAllFields() {
 
 /***** COMMENTS SECTION  *****/
 
+const filterName = document.getElementById("btnradio1");
+const filterCompany = document.getElementById("btnradio2");
+const filterSalary = document.getElementById("btnradio3");
+
+
+filterName.addEventListener('click', () => {
+    currentFilter = 'name';
+    appendAllCards(currentFilter);
+})
+
+filterCompany.addEventListener('click', () => {
+    currentFilter = 'company';
+    appendAllCards(currentFilter);
+})
+
+filterSalary.addEventListener('click', () => {
+    currentFilter = 'salary';
+    appendAllCards(currentFilter);
+})
+
+/***** FUNCIÓN crear Card de comentarios: crea una card con los datos ingresados y validados en el formulario  *****/
 function createCard(commentObj) {
     const cardContainer = document.createElement('div');
     const cardBody = document.createElement('div');
@@ -198,4 +211,43 @@ function createCard(commentObj) {
     cardContainer.appendChild(cardBody);
 
     return cardContainer;
+}
+
+/***** FUNCIÓN append de Cards de comentarios  *****/
+function appendAllCards(filter) {
+
+    if (commentsList.length === 0) {
+        return
+    }
+
+    while(sectionComments.firstChild) {
+        sectionComments.removeChild(sectionComments.firstChild);
+    }
+
+    commentsList.sort((commentA, commentB) => {
+        if (filter === 'salary') {
+            return commentB.salary - commentA.salary;
+        } 
+        if (filter === 'name') {
+            if (commentA.name < commentB.name) {
+                return -1;
+            }
+            if (commentB.name < commentA.name) {
+                return 1;
+            }
+            return 0;
+        }
+        if (filter === 'company') {
+            if (commentA.company < commentB.company) {
+                return -1;
+            }
+            if (commentB.company < commentA.company) {
+                return 1;
+            }
+            return 0;
+        }
+    }).forEach(comment => {
+        const cardElement = createCard(comment);
+        sectionComments.appendChild(cardElement);
+    });
 }
