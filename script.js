@@ -15,10 +15,14 @@ const commentsList = []
 let currentFilter = 'name'; // name - company - salary
 
 /***** LISTENER Click botón submit  *****/
-formSubmit.addEventListener('click', () => {
+formSubmit.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    // valida campos
     const allFieldsAreValid = validateAllFields();
+    
     if (allFieldsAreValid) {
-        //create comment container and append
+        // crea objeto comentario
         const commentObj = {
             name: formName.value,
             lastName: formLastName.value,
@@ -28,11 +32,13 @@ formSubmit.addEventListener('click', () => {
             comment: formComment.value,
         }
 
+        // actualiza lista de comentarios
         commentsList.push(commentObj);
 
+        // compone las cards y actualiza el DOM
         appendAllCards(currentFilter);
 
-        //limpiar inputs
+        // limpia inputs
         clearAllFields();
     }
 })
