@@ -1,4 +1,3 @@
-const formContact = document.getElementById("form-contact");
 const formName = document.getElementById("form-name");
 const formLastName = document.getElementById("form-lastname");
 const formCompany = document.getElementById("form-company");
@@ -9,48 +8,82 @@ const formSubmit = document.getElementById("form-submit");
 
 const errorClass = 'form-error';
 
+
+
+/***** LISTENER Click botón submit  *****/
 formSubmit.addEventListener('click', () => {
-    const allFieldsAreValid = validateFields();
+    const allFieldsAreValid = validateAllFields();
     if (allFieldsAreValid) {
         //create comment container and append
-        //clear inputs
+
+        //limpiar inputs
+        clearAllFields();
     }
 })
 
 
+
+/***** EMPIEZA Listener Focus Inputs de ingreso de data *****/
 formName.addEventListener('focus', () => {
-    cleanError(formName);
+    clearError(formName);
 })
 
 formLastName.addEventListener('focus', () => {
-    cleanError(formLastName);
+    clearError(formLastName);
 })
 
 formCompany.addEventListener('focus', () => {
-    cleanError(formCompany);
+    clearError(formCompany);
 })
 
 formEmail.addEventListener('focus', () => {
-    cleanError(formEmail);
+    clearError(formEmail);
 })
 
 formSalary.addEventListener('focus', () => {
-    cleanError(formSalary);
+    clearError(formSalary);
 })
 
 formComment.addEventListener('focus', () => {
-    cleanError(formComment);
+    clearError(formComment);
 })
+/***** TERMINA Listener Inputs Individuales *****/
 
-function cleanError(selector) {
+
+/***** FUNCIÓN limpiar error: remueve la clase 'form-error' del input  *****/
+function clearError(selector) {
     selector.classList.remove(errorClass);
 }
 
-function validateFields() {
+/***** FUNCIÓN limpiar campos: remueve el contenido (value) de todos los inputs de ingreso de data  *****/
+function clearAllFields() {
+    clearField(formName);
+    clearField(formLastName);
+    clearField(formCompany);
+    clearField(formEmail);
+    clearField(formSalary);
+    clearField(formComment);
+}
+
+/***** FUNCIÓN limpiar campo: remueve el contenido (value) de un input de ingreso de data, según su tipo (type)  *****/
+function clearField(selector) {
+    if (selector.type === 'text' || selector.type === 'textarea' || selector.type === 'email' ) {
+        selector.value = '';
+    }
+
+    if (selector.type === 'number') {
+        selector.value = '0';
+    }
+}
+
+/***** FUNCIÓN validar campos: valida el contenido (value) de todos los inputs de ingreso de data  *****/
+function validateAllFields() {
 
     let allFieldsAreValid = true;
     let errorMessage = 'Se han producido los siguientes errores en el formulario:'
 
+    // Se chequea que el contenido (value) es un string vacío ('')
+    // En el caso del salario, se chequea si el contenido (value) es '0'
     if (!formName.value) {
         allFieldsAreValid = false;
         errorMessage += '\n    El campo Nombre está vacío'
@@ -82,9 +115,11 @@ function validateFields() {
         formComment.classList.add(errorClass);
     }
 
+    // Si no todos los campos son válidos, se muestra una alerta con los mensajes de error concatenados
     if (!allFieldsAreValid) {
         alert(errorMessage);
     }
 
+    // Se retorna el booleano, si es true, todos los campos son válidos y se realiza el submit, si es false, se muestra la alerta
     return allFieldsAreValid
 }
