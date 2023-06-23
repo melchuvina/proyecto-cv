@@ -31,9 +31,6 @@ p {
 .sub-section{
     margin-bottom: 15px;
 }
-.clear {
-    clear :both;
-}
 .imagen-perfil {
     display: block;
     width: 250px;

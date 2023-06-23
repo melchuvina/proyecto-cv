@@ -1,3 +1,7 @@
+const sectionComments = document.getElementById("js-form-comments");
+
+/***** FORM SECTION  *****/
+
 const formName = document.getElementById("form-name");
 const formLastName = document.getElementById("form-lastname");
 const formCompany = document.getElementById("form-company");
@@ -7,6 +11,7 @@ const formComment = document.getElementById("form-comment");
 const formSubmit = document.getElementById("form-submit");
 
 const errorClass = 'form-error';
+const commentsList = []
 
 
 
@@ -15,6 +20,18 @@ formSubmit.addEventListener('click', () => {
     const allFieldsAreValid = validateAllFields();
     if (allFieldsAreValid) {
         //create comment container and append
+        const commentObj = {
+            name: formName.value,
+            lastName: formLastName.value,
+            company: formCompany.value,
+            email: formEmail.value,
+            salary: Number(formSalary.value),
+            comment: formComment.value,
+        }
+
+        commentsList.push(commentObj);
+
+        
 
         //limpiar inputs
         clearAllFields();
@@ -72,7 +89,7 @@ function clearField(selector) {
     }
 
     if (selector.type === 'number') {
-        selector.value = '0';
+        selector.value = '200000';
     }
 }
 
@@ -83,7 +100,7 @@ function validateAllFields() {
     let errorMessage = 'Se han producido los siguientes errores en el formulario:'
 
     // Se chequea que el contenido (value) es un string vacío ('')
-    // En el caso del salario, se chequea si el contenido (value) es '0'
+    // En el caso del salario, se chequea si el contenido (value) es menor a 200000
     if (!formName.value) {
         allFieldsAreValid = false;
         errorMessage += '\n    El campo Nombre está vacío'
@@ -104,7 +121,7 @@ function validateAllFields() {
         errorMessage += '\n    El campo Email está vacío'
         formEmail.classList.add(errorClass);
     }
-    if (formSalary.value === '0') {
+    if (Number(formSalary.value) < 200000) {
         allFieldsAreValid = false;
         errorMessage += '\n    El campo Salario Mínimo es nulo'
         formSalary.classList.add(errorClass);
@@ -123,3 +140,6 @@ function validateAllFields() {
     // Se retorna el booleano, si es true, todos los campos son válidos y se realiza el submit, si es false, se muestra la alerta
     return allFieldsAreValid
 }
+
+
+/***** COMMENTS SECTION  *****/

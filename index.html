@@ -48,16 +48,8 @@
                 </ul>
                 </section>
                 <div class="separador"></div>
-                <!-- <section>
-                    <h3>Idiomas</h3>
-                    <ul>
-                        <li>Español Nativo</li>
-                        <li>Inglés B1</li>
-                    </ul>
-                </section> 
-                <div class="separador"></div> -->
                 <section>
-                    <h3>Comentarios</h3>
+                    <h3>Contacto</h3>
                     <form id="form-contact" class="form-contacto">
                         <label for="form-name" class="form-label">Nombre*</label>
                         <input id="form-name" class=" form-input" type="text">
@@ -68,7 +60,7 @@
                         <label for="form-email" class="form-label">Email*</label>
                         <input id="form-email" class="form-input" type="email">
                         <label for="form-salary" class="form-label">Salario Mínimo*</label>
-                        <input id="form-salary" class="form-input" type="number" min="0" value="0">
+                        <input id="form-salary" class="form-input" type="number" min="200000" value="200000">
                         <label for="Mensaje" class="form-label">Mensaje*</label>
                         <textarea name="textarea" class="form-input" id="form-comment" placeholder="Dejame acá tu comentario"></textarea>
                         <input type="button" id="form-submit" value="Enviar">
@@ -98,7 +90,7 @@
                         <p>Encargada del contacto con clientes residenciales y corporativos en el área administrativa<br>de una empresa de telecomunicaciones. Manejo de CRM y AVAYA.<br>Conocimientos de Back Office y control de métricas</p>
                     </section>
                 </section>
-                <section>
+                <section class="main-section">
                     <h3>Educación</h3>
                     <caption>Títulos en orden cronológico</caption>
                     <table>
@@ -125,10 +117,35 @@
                     </table>
     
                 </section>
+                <section>
+                    <h3>Comentarios enviados</h3>
+                    <div class="btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-outline-dark" for="btnradio1">Nombre</label>
+                      
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-dark" for="btnradio2">Empresa</label>
+                      
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-dark" for="btnradio3">Salario Mínimo</label>
+                    </div>
+                    <div id="js-form-comments" class="d-flex mt-3">
+                        <div class="card">
+                            <div class="card-body">
+                              No hay comentarios para mostrar en este momento.
+                            </div>
+                        </div>
+                        <!-- <div class="card me-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Nombre</h5>
+                              <h6 class="card-subtitle mb-2 text-body-secondary">Empresa</h6>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-text">Salario ofrecido: $200.000</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </section>
             </div>
-        </div>
-        <div class="row">
-
         </div>
     </main>
     
